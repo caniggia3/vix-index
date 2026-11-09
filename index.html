@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIX Index 隐私政策 · Privacy Policy</title>
+<style>
+  :root {
+    --bg: #0a1220;
+    --panel: #0f1c2e;
+    --line: rgba(255,255,255,.08);
+    --text: #e9f0f8;
+    --muted: #93a8bf;
+    --green: #2fcf8a;
+    --yellow: #e8c53f;
+    --red: #ff6b61;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(120% 80% at 78% 0%, rgba(46,96,168,.22), transparent 60%), linear-gradient(165deg, #101e33, #0a1220 60%);
+    color: var(--text);
+    font-family: "Cascadia Mono", "JetBrains Mono", Consolas, "SF Mono", Menlo, "Microsoft YaHei", monospace;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+  header img { width: 44px; height: 44px; border-radius: 10px; }
+  h1 { font-size: 26px; margin: 0; letter-spacing: 0; }
+  .sub { color: var(--muted); font-size: 12px; margin: 2px 0 0; }
+  .meta { color: #6b7d94; font-size: 12px; margin: 18px 0 34px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .card.hl { border-color: rgba(47,207,138,.35); background: linear-gradient(180deg, rgba(47,207,138,.08), rgba(47,207,138,.02)); }
+  h2 { font-size: 15px; margin: 0 0 10px; color: #fff; }
+  h2 .n { color: #5d728c; margin-right: 8px; }
+  p, li { font-size: 13px; color: #b9c8da; }
+  p { margin: 0 0 10px; }
+  ul { margin: 0 0 10px; padding-left: 18px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: #5d728c; }
+  b, strong { color: #eaf1f9; }
+  .ok { color: var(--green); font-weight: 700; }
+  .warn { color: var(--yellow); }
+  code {
+    background: rgba(255,255,255,.06);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 12px;
+    color: #cfe0f4;
+    word-break: break-all;
+  }
+  a { color: #58b0e8; text-decoration: none; border-bottom: 1px dotted rgba(88,176,232,.5); }
+  a:hover { border-bottom-style: solid; }
+  .divider { height: 1px; background: var(--line); margin: 34px 0 26px; }
+  .en h1 { font-size: 20px; }
+  .en p, .en li { color: #9fb0c6; }
+  footer { color: #55677e; font-size: 11px; margin-top: 36px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon128.png" alt="VIX Index">
+    <div>
+      <h1>VIX Index 隐私政策</h1>
+      <p class="sub">Privacy Policy · Chrome Extension</p>
+    </div>
+  </header>
+  <p class="meta">生效日期：2026 年 11 月 10 日 &nbsp;·&nbsp; 版本 1.0.1</p>
+
+  <div class="card hl">
+    <h2>一句话总结</h2>
+    <p>本扩展<span class="ok">不收集、不存储、不传输任何个人信息</span>。它只向 CBOE 官方公开接口请求行情数据，然后把结果显示在你本机的浏览器里。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">01</span>我们收集哪些数据</h2>
+    <p><b>不收集任何数据。</b>没有账号体系，不需要登录，不采集浏览记录、点击行为、设备标识、IP 归属地或任何可识别个人身份的信息。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">02</span>扩展发起的网络请求</h2>
+    <p>扩展仅访问以下 CBOE 官方公开接口，用于获取 VIX 指数行情：</p>
+    <ul>
+      <li><code>cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX.json</code> —— 当前报价</li>
+      <li><code>cdn.cboe.com/api/global/delayed_quotes/charts/intraday/_VIX.json</code> —— 当日分钟走势</li>
+      <li><code>cdn.cboe.com/api/global/delayed_quotes/charts/historical/_VIX.json</code> —— 日线历史</li>
+    </ul>
+    <p>这些请求为只读 GET，<b>不携带任何用户标识、Cookie 或认证信息</b>，返回内容仅为公开的市场行情 JSON。请求可能因 CBOE 服务器 302 跳转而访问 <code>cdn-api.cboe.com</code> 下的相同路径。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">03</span>本地存储</h2>
+    <p>扩展使用浏览器提供的 <code>chrome.storage.local</code> 在本机缓存最近一次行情数据与日线历史，目的是减少重复请求、并在断网时展示上次数据。</p>
+    <p>该缓存<b>仅存在于你的设备上</b>，不会上传到任何服务器。卸载扩展即被浏览器自动清除。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">04</span>权限用途说明</h2>
+    <ul>
+      <li><b>storage</b>：本机缓存行情数据，避免重复请求。</li>
+      <li><b>alarms</b>：每 5 分钟触发一次后台刷新，更新工具栏图标上的指数数值。</li>
+      <li><b>cdn.cboe.com / cdn-api.cboe.com（仅限 /api/global/delayed_quotes/ 路径）</b>：读取公开行情数据，是本扩展唯一的数据来源。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">05</span>数据共享与第三方</h2>
+    <p>不向任何第三方出售、出租或共享数据。<b>不包含任何分析、追踪、广告或指纹识别代码</b>，也没有接入任何第三方 SDK。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">06</span>远程代码</h2>
+    <p>扩展的所有 JavaScript 均打包在安装包内，<b>不使用 <code>eval</code>、不动态加载远程脚本</b>，符合 Chrome 应用商店对 MV3 扩展的要求。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">07</span>儿童隐私</h2>
+    <p>本扩展不面向 13 岁以下儿童，也不会有意收集其任何信息（实际上不收集任何人的信息）。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">08</span>免责声明</h2>
+    <p>行情数据由 CBOE 提供，<b>延迟至少 20 分钟</b>，仅供参考，不构成任何投资建议。本扩展为个人开发的非官方工具，与 CBOE Options Exchange 无隶属或背书关系；VIX 为芝加哥期权交易所的商标。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">09</span>政策变更与联系方式</h2>
+    <p>若本政策发生实质性变更，会更新本页面的「生效日期」。继续使用即视为接受更新后的政策。</p>
+    <p>任何疑问或数据相关请求，请通过 <a href="https://github.com/caniggia3/vix-index/issues" target="_blank" rel="noreferrer">GitHub Issues</a> 联系开发者。</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="en">
+    <h1>Privacy Policy (English)</h1>
+    <p><b>VIX Index does not collect, store, or transmit any personal data.</b></p>
+    <p>The extension requests publicly available market data from CBOE's public endpoints under <code>cdn.cboe.com/api/global/delayed_quotes/</code> (and the equivalent path on <code>cdn-api.cboe.com</code> after redirects). These are read-only GET requests that carry no user identifiers, cookies, or credentials.</p>
+    <p>Quote data is cached locally via <code>chrome.storage.local</code> solely to reduce network requests and to show the last known values while offline. This cache never leaves the user's device and is removed when the extension is uninstalled.</p>
+    <p>The extension contains no analytics, tracking, advertising, or third-party SDKs, and executes no remote code.</p>
+    <p>Market data is provided by CBOE with a delay of at least 20 minutes and is for informational purposes only; it is not investment advice. This is an unofficial tool and is not affiliated with or endorsed by CBOE Options Exchange. VIX is a trademark of the Chicago Board Options Exchange.</p>
+    <p>Contact: <a href="https://github.com/caniggia3/vix-index/issues" target="_blank" rel="noreferrer">GitHub Issues</a></p>
+  </div>
+
+  <footer>VIX Index · Chrome Extension · Last updated 2026-11-10</footer>
+</div>
+</body>
+</html>
