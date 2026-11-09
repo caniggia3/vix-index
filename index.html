@@ -61,6 +61,27 @@
   .divider { height: 1px; background: var(--line); margin: 34px 0 26px; }
   .en h1 { font-size: 20px; }
   .en p, .en li { color: #9fb0c6; }
+  .dl { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #2fcf8a, #23a86e);
+    color: #06210f;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    border-bottom: none;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.ghost {
+    background: transparent;
+    color: #9fb0c6;
+    border: 1px solid rgba(255,255,255,.14);
+    font-weight: 400;
+  }
+  .btn.ghost:hover { border-color: rgba(255,255,255,.3); color: #e9f0f8; }
+  .dl-note { color: #6b7d94; font-size: 11px; margin: 12px 0 0; }
   footer { color: #55677e; font-size: 11px; margin-top: 36px; text-align: center; }
 </style>
 </head>
@@ -78,6 +99,15 @@
   <div class="card hl">
     <h2>一句话总结</h2>
     <p>本扩展<span class="ok">不收集、不存储、不传输任何个人信息</span>。它只向 CBOE 官方公开接口请求行情数据，然后把结果显示在你本机的浏览器里。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">↓</span>下载安装</h2>
+    <div class="dl">
+      <a class="btn" href="https://github.com/caniggia3/vix-index/releases/download/v1.0.1/VIX-Index-v1.0.1.zip">下载 v1.0.1（ZIP）</a>
+      <a class="btn ghost" href="https://github.com/caniggia3/vix-index/releases">查看全部版本</a>
+    </div>
+    <p class="dl-note">解压后在 <code>chrome://extensions/</code> 开启「开发者模式」→「加载已解压的扩展程序」→ 选择解压出的文件夹。解压目录请勿删除或移动。</p>
   </div>
 
   <div class="card">
